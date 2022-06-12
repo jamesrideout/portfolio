@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 2rem;
+    font-size: 2vw;
     font-family: 'Roboto Mono', monospace;
     color:rgb(240, 224, 255);
     background-color:ghostwhite;
@@ -87,10 +87,11 @@ nav:hover {
     border-bottom: 0px solid white;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    transition: opacity 200ms linear, border-bottom 200ms linear, border-bottom-left-radius 200ms linear, border-bottom-right-radius 200ms linear, color 200ms linear;
 }
 
 .nav-center p:hover {
-    transition: opacity 200ms linear, border-bottom 200ms linear, border-bottom-left-radius 200ms linear, border-bottom-right-radius 200ms linear, color 200ms linear;
+    
     opacity: 100%;
     border-bottom: 3px rgb(237, 218, 255) solid;
     border-bottom-left-radius: 5px;
@@ -130,10 +131,11 @@ nav:hover {
     background-position:fixed; 
     background-size: cover; 
     background-repeat: no-repeat; 
+    border-radius: 50px;
 }
 
 #hi {
-    padding: 50px;
+    padding: 25px;
 }
 
 .intro-banner {
@@ -158,12 +160,13 @@ nav:hover {
     list-style: none;
     color: rgb(214, 164, 255);
     font-family: 'Indie Flower', 'Roboto Mono', monospace;
-    font-size: 10rem;
+    
 }
 
 #name-list * {
     padding: 25px 10px;
     opacity: 50%;
+    font-size: 9.5vw;
 }
 
 #j {
@@ -173,7 +176,7 @@ nav:hover {
 
 #j:hover {
     opacity: 100%;
-    font-size: 11.5vw;
+    font-size: 12vw;
     transform: translate(0px, -20px);
 }
 
@@ -230,15 +233,125 @@ nav:hover {
 
 .space-container > p {
     margin-left: 100px;
-    padding-bottom: 250px;
+    padding-bottom: 100px;
 }
 
 /* Technologies */
 
 .technologies-header {
     margin: auto;
-    padding: 50px;
+    padding: 25px;
     border-radius: 25px;
     width: 75%;
     color: black;
+}
+
+.technologies-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(116, 101, 153);
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+
+.tech-box {
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    transition: background-color 100ms linear;
+}
+
+.tech-box:hover {
+    background-color: rgb(116, 101, 153);
+}
+
+.tech-img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Rubber Ducking */
+
+.duck {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 26, 26);
+    border-radius: 25px;
+    padding: 10px;
+    transition: color 200ms linear, background-color 200ms linear;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.duck:hover {
+    background-color:ghostwhite;
+    color: orangered;
+}
+
+.duck h3 {
+    width: 80%;
+}
+
+.duck img {
+    width: 125px;
+    height: 125px; 
+    border-radius: 100%;
+}
+
+/* Github source code */
+
+.github-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.github-container img {
+    border-radius: 100px;
+    width: 100%;
+}
+
+.sourcetext {
+    position: absolute;
+    margin-top: 50px;
+    font-size: 3vw;
+    width: 80%;
+}
+
+#gitlink {
+    transition: opacity 200ms linear, border-bottom 200ms linear, border-bottom-left-radius 200ms linear, border-bottom-right-radius 200ms linear, color 200ms linear, font-size 200ms linear;
+    font-size: 3.5vw;
+}
+
+#gitlink:hover {
+    opacity: 100%;
+    border-bottom: 3px rgb(237, 218, 255) solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    font-size: 4vw;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    font-size: 1vw;
+    align-items: center;
+}
+
+footer p {
+    margin: 10px;
 }
