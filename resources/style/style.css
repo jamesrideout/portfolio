@@ -369,6 +369,44 @@ nav:hover {
     padding: 15px;
 }
 
+/* Porfolio Links */
+
+#projects {
+    background-color: rgb(20, 20, 20);
+    border-radius: 100px;
+    width: 30%;
+    padding: 15px;
+    margin: auto;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    border-radius: 100px;
+    width: 90%;
+}
+
+.portfolio-text {
+    margin: 25px;
+}
+
+#spotify-img {
+    border-radius: 100px;
+    width: 250px;
+    height: 100px;
+    padding: 15px;
+    margin: 25px;
+    border: rgb(20, 20, 20) 1px solid;
+}
+
+#spotify-img:hover {
+    border: white 3px solid;
+    transition: border 300ms ease-out;
+}
+
 /* Contact */
 
 .contact-header {
