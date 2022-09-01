@@ -10,7 +10,7 @@ body {
     font-size: 2vw;
     font-family: 'Roboto Mono', monospace;
     color:rgb(240, 224, 255);
-    background-color:ghostwhite;
+    background-color:white;
 }
 
 a {
@@ -40,7 +40,7 @@ h1 {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 95%;
     background-color: rgb(20, 20, 20);
     border-bottom-left-radius: 50px;
@@ -61,7 +61,6 @@ nav:hover {
     width: 50px;
     padding: 5px;
     margin: 10px;
-    margin-left: 20px;
     border: 2px solid rgb(20, 20, 20);
     border-radius: 33%;
     opacity: 75%;
@@ -71,7 +70,6 @@ nav:hover {
     transition: margin-left 1.5s ease-out, border 2s, opacity 1s;
     opacity: 100%;
     border: 2px solid rgb(75, 53, 99);
-    margin-left: 35px;
 }
 
 .nav-center {
@@ -143,7 +141,7 @@ nav:hover {
     margin: auto;
     justify-content: space-evenly;
     font-size: 6vw;
-
+    margin: 25px;
 }
 
 .intro-text-wrapper {
@@ -159,7 +157,6 @@ nav:hover {
     list-style: none;
     color: rgb(234, 208, 255);
     font-family: 'Indie Flower', 'Roboto Mono', monospace;
-    
 }
 
 #name-list * {
@@ -169,14 +166,13 @@ nav:hover {
 }
 
 #j {
-    font-size: 11vw;
+    font-size: 10vw;
     transition: opacity 200ms linear, font-size 200ms linear, transform 200ms linear;
 }
 
 #j:hover {
     opacity: 100%;
-    font-size: 12vw;
-    transform: translate(0px, -20px);
+    font-size: 10.25vw;
 }
 
 #a {
@@ -217,8 +213,8 @@ nav:hover {
 
 #profile-img {
     border-radius: 50%;
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 30vh;
+    max-width: 30vw;
     min-height: 100px;
     min-width: 100px;
     opacity: 75%;
@@ -355,8 +351,8 @@ nav:hover {
 
 #about-img {
     border-radius: 100px;
-    width: 300px;
-    height: 300px;
+    max-width: 30vw;
+    max-height: 30vh;
     padding: 25px;
 }
 
@@ -393,10 +389,16 @@ nav:hover {
     margin: 25px;
 }
 
+.spotify-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #spotify-img {
     border-radius: 100px;
-    width: 250px;
-    height: 100px;
+    max-width: 15vw;
+    max-height: 15vh;
     padding: 15px;
     margin: 25px;
     border: rgb(20, 20, 20) 1px solid;
@@ -405,6 +407,25 @@ nav:hover {
 #spotify-img:hover {
     border: white 3px solid;
     transition: border 300ms ease-out;
+}
+
+.reddit-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reddit-logo {
+    max-width: 15vw;
+    max-height: 15vh;
+    padding: 15px;
+    margin: 25px;
+}
+
+#reddit-logo:hover {
+    border: white 3px solid;
+    transition: border 300ms ease-out;
+    border-radius: 50%;
 }
 
 /* Contact */
@@ -416,6 +437,99 @@ nav:hover {
     padding: 25px 75px;
     width: 80%;
     font-size: 1.75vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    color: rgb(240, 224, 255);
+    background-color: black;
+    border-radius: 20px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+fieldset input {
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20vw;
+  margin: 10px auto;
+  margin-top: 25px;
+  background-color: none;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 .map-container {
@@ -432,7 +546,7 @@ nav:hover {
 }
 
 #map:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -440,9 +554,11 @@ nav:hover {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     font-size: 1vw;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 footer p {
