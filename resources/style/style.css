@@ -3,11 +3,18 @@
 
 /* Global settings */
 
+:root {
+    --fs-xs: 0.75rem;
+    --fs-small: 1.5rem;
+    --fs-medium: 2rem;
+    --fs-large: 3.5rem;
+    --fs-xl: 5rem;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 2vw;
     font-family: 'Roboto Mono', monospace;
     color:rgb(240, 224, 255);
     background-color:white;
@@ -16,19 +23,23 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    font-size: var(--fs-medium);
 }
 
-h1, h2, h3, h4, h5, h6, p, ul {
-    padding: 0;
+h2, h3, h4, h5, h6, ul {
+    padding: 10px;
     margin: 0;
+    font-size: var(--fs-large);
 }
 
 p {
     padding: 5px;
+    font-size: var(--fs-small);
 }
 
 h1 {
-    font-size: 9vw;
+    font-size: var(--fs-xl);
+    margin: 10px;
     color: white;
 }
 
@@ -53,7 +64,7 @@ nav {
 }
 
 nav:hover {
-    border-bottom: 10px solid rgb(136, 136, 136);
+    border-bottom: 5px solid rgb(95, 95, 95);
 }
 
 #j-logo {
@@ -79,8 +90,7 @@ nav:hover {
 
 .nav-center p {
     align-self: center;
-    margin: 0 50px;
-    font-size: 30px;
+    margin: 0 1.25rem;
     opacity: 75%;
     border-bottom: 0px solid white;
     border-bottom-left-radius: 0px;
@@ -119,6 +129,35 @@ nav:hover {
 
 .nav-right :last-child {
     margin-right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-right img {
+        display: none;
+    }
+    #j-logo {
+        display: none;
+    }
+    a {
+        font-size: var(--fs-xs);
+    }
+    h1 {
+        display: none;
+    }
+    h2, h3, h4, h5, h6, ul {
+        font-size: var(--fs-small);
+    }
+    p {
+        font-size: var(--fs-xs);
+    }
+    .duck img {
+        width: 75px !important;
+        height: 75px !important; 
+    }
+    .tech-img {
+        width: 100px !important;
+        height: 100px !important;
+    }
 }
 
 /* Home */
@@ -213,12 +252,22 @@ nav:hover {
 
 #profile-img {
     border-radius: 50%;
-    max-height: 30vh;
-    max-width: 30vw;
-    min-height: 100px;
-    min-width: 100px;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
     opacity: 75%;
     transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+@media screen and (max-width: 900px) {
+    #profile-img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-top: 1rem;
+    }
+    #profile-img:hover {
+        transform: none !important;
+    }
 }
 
 #profile-img:hover {
@@ -227,8 +276,8 @@ nav:hover {
 }
 
 .space-container > p {
-    margin-left: 100px;
-    padding-bottom: 100px;
+    margin-left: 10vw;
+    padding-bottom: 10vh;
 }
 
 /* Technologies */
@@ -319,7 +368,6 @@ nav:hover {
 .sourcetext {
     position: absolute;
     margin-top: 50px;
-    font-size: 3vw;
     width: 80%;
 }
 
@@ -338,6 +386,31 @@ nav:hover {
 }
 
 /* About */
+
+@media screen and (max-width: 900px) {
+    #about-img {
+        display: none;
+    }
+    .spotify-wrapper {
+        flex-direction: column;
+    }
+    .reddit-wrapper {
+        flex-direction: column;
+    }
+    #spotify-img {
+        max-width: 75px !important;
+        max-height: 75px !important;
+        padding: 0rem !important;
+        margin: 0.5rem !important;
+
+    }
+    #reddit-logo {
+        max-width: 75px !important;
+        max-height: 75px !important;
+        padding: 0rem !important;
+        margin: 0.5rem !important;
+    }
+}
 
 .about-container {
     display: flex;
@@ -358,10 +431,10 @@ nav:hover {
 
 .about-text h3 {
     padding: 15px;
+    margin: 15px;
 }
 
 .about-text p {
-    font-size: 1.5vw;
     padding: 15px;
 }
 
@@ -370,7 +443,7 @@ nav:hover {
 #projects {
     background-color: rgb(20, 20, 20);
     border-radius: 100px;
-    width: 30%;
+    width: 50%;
     padding: 15px;
     margin: auto;
 }
@@ -386,21 +459,22 @@ nav:hover {
 }
 
 .portfolio-text {
-    margin: 25px;
+    margin: 1rem;
+    width: 80%;
 }
 
 .spotify-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 #spotify-img {
     border-radius: 100px;
-    max-width: 15vw;
-    max-height: 15vh;
-    padding: 15px;
-    margin: 25px;
+    max-width: 250px;
+    max-height: 250px;
+    padding: 1rem;
+    margin: 1rem;
     border: rgb(20, 20, 20) 1px solid;
 }
 
@@ -416,8 +490,8 @@ nav:hover {
 }
 
 #reddit-logo {
-    max-width: 15vw;
-    max-height: 15vh;
+    max-width: 150px;
+    max-height: 150px;
     padding: 15px;
     margin: 25px;
 }
@@ -430,13 +504,20 @@ nav:hover {
 
 /* Contact */
 
+@media screen and (max-width: 900px) {
+    .contact-header {
+        font-size: var(--fs-small) !important;
+        padding: 1rem 2rem !important;
+    }
+}
+
 .contact-header {
     background-color: rgb(20, 20, 20);
     margin: 50px auto;
     border-radius: 50px;
     padding: 25px 75px;
     width: 80%;
-    font-size: 1.75vw;
+    font-size: var(--fs-medium);
 }
 
 form {
@@ -556,11 +637,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    font-size: 1vw;
     align-items: center;
     padding-bottom: 50px;
 }
 
 footer p {
     margin: 10px;
+    font-size: var(--fs-xs);
 }
